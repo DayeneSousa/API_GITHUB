@@ -1,131 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-25T20:44:03.283655" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-25T22:14:02.329096" rpa="false" schemaversion="5">
 <suite id="s1" name="API GITHUB" source="C:\Users\sousa\OneDrive\Área de Trabalho\workspace\API_GITHUB">
 <suite id="s1-s1" name="Suites" source="C:\Users\sousa\OneDrive\Área de Trabalho\workspace\API_GITHUB\suites">
 <suite id="s1-s1-s1" name="Usuario" source="C:\Users\sousa\OneDrive\Área de Trabalho\workspace\API_GITHUB\suites\usuario.robot">
 <test id="s1-s1-s1-t1" name="CT01- Iniciando Autenticação Básica" line="40">
 <kw name="Iniciar Sessão" owner="github">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-01-25T20:44:03.682890" level="INFO">Creating Session using : alias=Mysession, url=https://api.github.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-01-25T22:14:02.774345" level="INFO">Creating Session using : alias=Mysession, url=https://api.github.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>Mysession</arg>
 <arg>${HOST}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-01-25T20:44:03.682286" elapsed="0.000899"/>
+<status status="PASS" start="2025-01-25T22:14:02.774058" elapsed="0.001234"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-01-25T20:44:03.683742" level="INFO">${HEADERS} = {'Authorization': '"Bearer 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"'}</msg>
+<msg time="2025-01-25T22:14:02.775999" level="INFO">${HEADERS} = {'Authorization': '"Bearer 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"'}</msg>
 <var>${HEADERS}</var>
 <arg>Authorization=${ACCESSTOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-01-25T20:44:03.683362" elapsed="0.000489"/>
+<status status="PASS" start="2025-01-25T22:14:02.775497" elapsed="0.001074"/>
 </kw>
-<status status="PASS" start="2025-01-25T20:44:03.681512" elapsed="0.002450"/>
+<status status="PASS" start="2025-01-25T22:14:02.773511" elapsed="0.003240"/>
 </kw>
-<status status="PASS" start="2025-01-25T20:44:03.680080" elapsed="0.004522"/>
+<status status="PASS" start="2025-01-25T22:14:02.772593" elapsed="0.004486"/>
 </test>
 <test id="s1-s1-s1-t2" name="CT02 - Verificar dados do Usuario Válido" line="43">
-<kw name="Informar dados do USuario Válido 5" source_name="Informar dados do USuario Válido ${ID_USUARIO}">
+<kw name="Informar dados do USuario Válido 1" source_name="Informar dados do USuario Válido ${ID_USUARIO}">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2025-01-25T20:44:04.109438" level="INFO">GET Request : url=https://api.github.com/user/5 
- path_url=/user/5 
+<msg time="2025-01-25T22:14:03.324430" level="INFO">GET Request : url=https://api.github.com/user/1 
+ path_url=/user/1 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-01-25T20:44:04.109806" level="INFO">GET Response : url=https://api.github.com/user/5 
+<msg time="2025-01-25T22:14:03.325010" level="INFO">GET Response : url=https://api.github.com/user/1 
  status=200, reason=OK 
- headers={'Date': 'Sat, 25 Jan 2025 23:43:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=60, s-maxage=60', 'Vary': 'Accept,Accept-Encoding, Accept, X-Requested-With', 'ETag': 'W/"1185911d460fed4c007bc59639c83cbe3d8ae17e11cca5521b98f319fad9e79a"', 'Last-Modified': 'Wed, 22 Jan 2025 12:20:12 GMT', 'X-GitHub-Media-Type': 'github.v3; format=json', 'x-github-api-version-selected': '2022-11-28', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset', 'Access-Control-Allow-Origin': '*', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'", 'Content-Encoding': 'gzip', 'Server': 'github.com', 'Accept-Ranges': 'bytes', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '29', 'X-RateLimit-Reset': '1737851597', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '31', 'Content-Length': '500', 'X-GitHub-Request-Id': '304C:2B30A1:2806DE9:2C4B6C1:67957744'} 
- body={"login":"ezmobius","id":5,"node_id":"MDQ6VXNlcjU=","avatar_url":"https://avatars.githubusercontent.com/u/5?v=4","gravatar_id":"","url":"https://api.github.com/users/ezmobius","html_url":"https://github.com/ezmobius","followers_url":"https://api.github.com/users/ezmobius/followers","following_url":"https://api.github.com/users/ezmobius/following{/other_user}","gists_url":"https://api.github.com/users/ezmobius/gists{/gist_id}","starred_url":"https://api.github.com/users/ezmobius/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ezmobius/subscriptions","organizations_url":"https://api.github.com/users/ezmobius/orgs","repos_url":"https://api.github.com/users/ezmobius/repos","events_url":"https://api.github.com/users/ezmobius/events{/privacy}","received_events_url":"https://api.github.com/users/ezmobius/received_events","type":"User","user_view_type":"public","site_admin":false,"name":"Ezra Zygmuntowicz","company":"Stuffstr PBC","blog":"http://stuffstr.com","location":"In the NW","email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":22,"public_gists":106,"followers":571,"following":13,"created_at":"2008-01-12T07:51:46Z","updated_at":"2025-01-22T12:20:12Z"} 
+ headers={'Date': 'Sun, 26 Jan 2025 01:14:03 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=60, s-maxage=60', 'Vary': 'Accept,Accept-Encoding, Accept, X-Requested-With', 'ETag': 'W/"ad630d833f3b5d91d8a360111b54a59b0328aac7023453081bd102296c56e68c"', 'Last-Modified': 'Fri, 17 Jan 2025 23:32:35 GMT', 'X-GitHub-Media-Type': 'github.v3; format=json', 'x-github-api-version-selected': '2022-11-28', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset', 'Access-Control-Allow-Origin': '*', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'", 'Content-Encoding': 'gzip', 'Server': 'github.com', 'Accept-Ranges': 'bytes', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '57', 'X-RateLimit-Reset': '1737857619', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '3', 'Content-Length': '527', 'X-GitHub-Request-Id': '311F:0ADC:B4F458:CCD352:67958C5B'} 
+ body={"login":"mojombo","id":1,"node_id":"MDQ6VXNlcjE=","avatar_url":"https://avatars.githubusercontent.com/u/1?v=4","gravatar_id":"","url":"https://api.github.com/users/mojombo","html_url":"https://github.com/mojombo","followers_url":"https://api.github.com/users/mojombo/followers","following_url":"https://api.github.com/users/mojombo/following{/other_user}","gists_url":"https://api.github.com/users/mojombo/gists{/gist_id}","starred_url":"https://api.github.com/users/mojombo/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mojombo/subscriptions","organizations_url":"https://api.github.com/users/mojombo/orgs","repos_url":"https://api.github.com/users/mojombo/repos","events_url":"https://api.github.com/users/mojombo/events{/privacy}","received_events_url":"https://api.github.com/users/mojombo/received_events","type":"User","user_view_type":"public","site_admin":false,"name":"Tom Preston-Werner","company":"@chatterbugapp, @redwoodjs, @preston-werner-ventures ","blog":"http://tom.preston-werner.com","location":"San Francisco","email":null,"hireable":null,"bio":null,"twitter_username":"mojombo","public_repos":66,"public_gists":62,"followers":24114,"following":11,"created_at":"2007-10-20T05:24:19Z","updated_at":"2025-01-17T23:32:35Z"} 
  </msg>
-<msg time="2025-01-25T20:44:04.110107" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-01-25T22:14:03.325513" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>url= ${HOST}/${ENDPOINT_USER}/${ID_USUARIO}</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2025-01-25T20:44:03.687493" elapsed="0.423283"/>
+<status status="PASS" start="2025-01-25T22:14:02.779708" elapsed="0.546017"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-01-25T20:44:04.111028" elapsed="0.000383"/>
+<status status="PASS" start="2025-01-25T22:14:03.326000" elapsed="0.000325"/>
 </return>
-<status status="PASS" start="2025-01-25T20:44:03.686673" elapsed="0.424997"/>
+<status status="PASS" start="2025-01-25T22:14:02.779095" elapsed="0.547576"/>
 </kw>
 <kw name="Validar id e tipo do usuario">
 <kw name="Informar dados do USuario Válido ${ID_USUARIO}" source_name="Informar dados do USuario Válido ${ID_USUARIO}">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2025-01-25T20:44:04.544930" level="INFO">GET Request : url=https://api.github.com/user/5 
+<msg time="2025-01-25T22:14:03.884505" level="INFO">GET Request : url=https://api.github.com/user/5 
  path_url=/user/5 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-01-25T20:44:04.545491" level="INFO">GET Response : url=https://api.github.com/user/5 
+<msg time="2025-01-25T22:14:03.885190" level="INFO">GET Response : url=https://api.github.com/user/5 
  status=200, reason=OK 
- headers={'Date': 'Sat, 25 Jan 2025 23:44:04 GMT', 'Cache-Control': 'public, max-age=60, s-maxage=60', 'Vary': 'Accept,Accept-Encoding, Accept, X-Requested-With', 'ETag': '"1185911d460fed4c007bc59639c83cbe3d8ae17e11cca5521b98f319fad9e79a"', 'Last-Modified': 'Wed, 22 Jan 2025 12:20:12 GMT', 'x-github-api-version-selected': '2022-11-28', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset', 'Access-Control-Allow-Origin': '*', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'", 'Server': 'github.com', 'Content-Type': 'application/json; charset=utf-8', 'X-GitHub-Media-Type': 'github.v3; format=json', 'Content-Encoding': 'gzip', 'Accept-Ranges': 'bytes', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '28', 'X-RateLimit-Reset': '1737851597', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '32', 'Content-Length': '500', 'X-GitHub-Request-Id': '31F1:386D1A:28AB351:2CEFBFD:67957744'} 
+ headers={'Date': 'Sun, 26 Jan 2025 01:14:03 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=60, s-maxage=60', 'Vary': 'Accept,Accept-Encoding, Accept, X-Requested-With', 'ETag': 'W/"1185911d460fed4c007bc59639c83cbe3d8ae17e11cca5521b98f319fad9e79a"', 'Last-Modified': 'Wed, 22 Jan 2025 12:20:12 GMT', 'X-GitHub-Media-Type': 'github.v3; format=json', 'x-github-api-version-selected': '2022-11-28', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset', 'Access-Control-Allow-Origin': '*', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'", 'Content-Encoding': 'gzip', 'Server': 'github.com', 'Accept-Ranges': 'bytes', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '56', 'X-RateLimit-Reset': '1737857619', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '4', 'Content-Length': '500', 'X-GitHub-Request-Id': '3120:5C331:27137FC:2B4932B:67958C5B'} 
  body={"login":"ezmobius","id":5,"node_id":"MDQ6VXNlcjU=","avatar_url":"https://avatars.githubusercontent.com/u/5?v=4","gravatar_id":"","url":"https://api.github.com/users/ezmobius","html_url":"https://github.com/ezmobius","followers_url":"https://api.github.com/users/ezmobius/followers","following_url":"https://api.github.com/users/ezmobius/following{/other_user}","gists_url":"https://api.github.com/users/ezmobius/gists{/gist_id}","starred_url":"https://api.github.com/users/ezmobius/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ezmobius/subscriptions","organizations_url":"https://api.github.com/users/ezmobius/orgs","repos_url":"https://api.github.com/users/ezmobius/repos","events_url":"https://api.github.com/users/ezmobius/events{/privacy}","received_events_url":"https://api.github.com/users/ezmobius/received_events","type":"User","user_view_type":"public","site_admin":false,"name":"Ezra Zygmuntowicz","company":"Stuffstr PBC","blog":"http://stuffstr.com","location":"In the NW","email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":22,"public_gists":106,"followers":571,"following":13,"created_at":"2008-01-12T07:51:46Z","updated_at":"2025-01-22T12:20:12Z"} 
  </msg>
-<msg time="2025-01-25T20:44:04.546305" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-01-25T22:14:03.886222" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>url= ${HOST}/${ENDPOINT_USER}/${ID_USUARIO}</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2025-01-25T20:44:04.113246" elapsed="0.433301"/>
+<status status="PASS" start="2025-01-25T22:14:03.328688" elapsed="0.557649"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-01-25T20:44:04.546857" elapsed="0.000320"/>
+<status status="PASS" start="2025-01-25T22:14:03.886503" elapsed="0.000197"/>
 </return>
-<msg time="2025-01-25T20:44:04.547581" level="INFO">${response_keyword} = &lt;Response [200]&gt;</msg>
+<msg time="2025-01-25T22:14:03.886853" level="INFO">${response_keyword} = &lt;Response [200]&gt;</msg>
 <var>${response_keyword}</var>
-<status status="PASS" start="2025-01-25T20:44:04.112767" elapsed="0.435040"/>
+<status status="PASS" start="2025-01-25T22:14:03.328359" elapsed="0.558591"/>
 </kw>
 <kw name="Should Not Be Equal As Strings" owner="BuiltIn">
 <arg>${response_keyword.json()["login"]}</arg>
 <arg>"ezmobius"</arg>
 <doc>Fails if objects are equal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-25T20:44:04.548145" elapsed="0.001521"/>
+<status status="PASS" start="2025-01-25T22:14:03.887188" elapsed="0.001489"/>
 </kw>
 <kw name="Should Not Be Equal As Strings" owner="BuiltIn">
 <arg>${response_keyword.json()["type"]}</arg>
 <arg>"User"</arg>
 <doc>Fails if objects are equal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-25T20:44:04.550050" elapsed="0.001074"/>
+<status status="PASS" start="2025-01-25T22:14:03.889243" elapsed="0.001461"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-25T20:44:04.554172" level="INFO">{'login': 'ezmobius', 'id': 5, 'node_id': 'MDQ6VXNlcjU=', 'avatar_url': 'https://avatars.githubusercontent.com/u/5?v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/ezmobius', 'html_url': 'https://github.com/ezmobius', 'followers_url': 'https://api.github.com/users/ezmobius/followers', 'following_url': 'https://api.github.com/users/ezmobius/following{/other_user}', 'gists_url': 'https://api.github.com/users/ezmobius/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/ezmobius/starred{/owner}{/repo}', 'subscriptions_url': 'https://api.github.com/users/ezmobius/subscriptions', 'organizations_url': 'https://api.github.com/users/ezmobius/orgs', 'repos_url': 'https://api.github.com/users/ezmobius/repos', 'events_url': 'https://api.github.com/users/ezmobius/events{/privacy}', 'received_events_url': 'https://api.github.com/users/ezmobius/received_events', 'type': 'User', 'user_view_type': 'public', 'site_admin': False, 'name': 'Ezra Zygmuntowicz', 'company': 'Stuffstr PBC', 'blog': 'http://stuffstr.com', 'location': 'In the NW', 'email': None, 'hireable': None, 'bio': None, 'twitter_username': None, 'public_repos': 22, 'public_gists': 106, 'followers': 571, 'following': 13, 'created_at': '2008-01-12T07:51:46Z', 'updated_at': '2025-01-22T12:20:12Z'}</msg>
+<msg time="2025-01-25T22:14:03.891682" level="INFO">{'login': 'ezmobius', 'id': 5, 'node_id': 'MDQ6VXNlcjU=', 'avatar_url': 'https://avatars.githubusercontent.com/u/5?v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/ezmobius', 'html_url': 'https://github.com/ezmobius', 'followers_url': 'https://api.github.com/users/ezmobius/followers', 'following_url': 'https://api.github.com/users/ezmobius/following{/other_user}', 'gists_url': 'https://api.github.com/users/ezmobius/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/ezmobius/starred{/owner}{/repo}', 'subscriptions_url': 'https://api.github.com/users/ezmobius/subscriptions', 'organizations_url': 'https://api.github.com/users/ezmobius/orgs', 'repos_url': 'https://api.github.com/users/ezmobius/repos', 'events_url': 'https://api.github.com/users/ezmobius/events{/privacy}', 'received_events_url': 'https://api.github.com/users/ezmobius/received_events', 'type': 'User', 'user_view_type': 'public', 'site_admin': False, 'name': 'Ezra Zygmuntowicz', 'company': 'Stuffstr PBC', 'blog': 'http://stuffstr.com', 'location': 'In the NW', 'email': None, 'hireable': None, 'bio': None, 'twitter_username': None, 'public_repos': 22, 'public_gists': 106, 'followers': 571, 'following': 13, 'created_at': '2008-01-12T07:51:46Z', 'updated_at': '2025-01-22T12:20:12Z'}</msg>
 <arg>${response_keyword.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-25T20:44:04.551705" elapsed="0.002888"/>
+<status status="PASS" start="2025-01-25T22:14:03.890918" elapsed="0.001251"/>
 </kw>
-<status status="PASS" start="2025-01-25T20:44:04.112144" elapsed="0.442657"/>
+<status status="PASS" start="2025-01-25T22:14:03.327722" elapsed="0.564602"/>
 </kw>
-<status status="PASS" start="2025-01-25T20:44:03.685648" elapsed="0.869681"/>
+<status status="PASS" start="2025-01-25T22:14:02.778206" elapsed="1.114451"/>
 </test>
 <test id="s1-s1-s1-t3" name="CT03 - Verificar dados do Usuario Inválido" line="49">
 <kw name="Informar dados do USuario inVálido">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2025-01-25T20:44:04.968844" level="INFO">GET Request : url=https://api.github.com/user/1111111458881 
+<msg time="2025-01-25T22:14:04.437623" level="INFO">GET Request : url=https://api.github.com/user/1111111458881 
  path_url=/user/1111111458881 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-01-25T20:44:04.969469" level="INFO">GET Response : url=https://api.github.com/user/1111111458881 
+<msg time="2025-01-25T22:14:04.438201" level="INFO">GET Response : url=https://api.github.com/user/1111111458881 
  status=404, reason=Not Found 
- headers={'Date': 'Sat, 25 Jan 2025 23:43:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'X-GitHub-Media-Type': 'github.v3; format=json', 'x-github-api-version-selected': '2022-11-28', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset', 'Access-Control-Allow-Origin': '*', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'", 'Vary': 'Accept-Encoding, Accept, X-Requested-With', 'Content-Encoding': 'gzip', 'Server': 'github.com', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '27', 'X-RateLimit-Reset': '1737851597', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '33', 'Content-Length': '101', 'X-GitHub-Request-Id': '304E:2455C1:27162AD:2B5AB48:67957744'} 
+ headers={'Date': 'Sun, 26 Jan 2025 01:14:04 GMT', 'Content-Type': 'application/json; charset=utf-8', 'X-GitHub-Media-Type': 'github.v3; format=json', 'x-github-api-version-selected': '2022-11-28', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset', 'Access-Control-Allow-Origin': '*', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'", 'Vary': 'Accept-Encoding, Accept, X-Requested-With', 'Content-Encoding': 'gzip', 'Server': 'github.com', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '55', 'X-RateLimit-Reset': '1737857619', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '5', 'Content-Length': '101', 'X-GitHub-Request-Id': '3105:2455C1:27A67A0:2BFF132:67958C5C'} 
  body={"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"} 
  </msg>
 <arg>url= ${HOST}/${ENDPOINT_USER}/1111111458881</arg>
 <arg>expected_status=404</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2025-01-25T20:44:04.558104" elapsed="0.411754"/>
+<status status="PASS" start="2025-01-25T22:14:03.895629" elapsed="0.543455"/>
 </kw>
-<status status="PASS" start="2025-01-25T20:44:04.557735" elapsed="0.412457"/>
+<status status="PASS" start="2025-01-25T22:14:03.895132" elapsed="0.544374"/>
 </kw>
-<status status="PASS" start="2025-01-25T20:44:04.556731" elapsed="0.414900"/>
+<status status="PASS" start="2025-01-25T22:14:03.894008" elapsed="0.546870"/>
 </test>
-<status status="PASS" start="2025-01-25T20:44:03.314269" elapsed="1.660508"/>
+<status status="PASS" start="2025-01-25T22:14:02.368350" elapsed="2.076278"/>
 </suite>
-<status status="PASS" start="2025-01-25T20:44:03.311498" elapsed="1.667193"/>
+<status status="PASS" start="2025-01-25T22:14:02.363968" elapsed="2.082613"/>
 </suite>
-<status status="PASS" start="2025-01-25T20:44:03.289059" elapsed="1.692413"/>
+<status status="PASS" start="2025-01-25T22:14:02.336030" elapsed="2.112712"/>
 </suite>
 <statistics>
 <total>
@@ -140,6 +140,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2025-01-25T20:44:03.263014" level="WARN">Error in file 'C:\Users\sousa\OneDrive\Área de Trabalho\workspace\API_GITHUB\suites\usuario.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-01-25T22:14:02.322680" level="WARN">Error in file 'C:\Users\sousa\OneDrive\Área de Trabalho\workspace\API_GITHUB\suites\usuario.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

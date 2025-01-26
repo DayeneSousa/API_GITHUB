@@ -18,8 +18,6 @@ Informar dados do USuario Válido ${ID_USUARIO}
 
 
 
-
-
 Validar id e tipo do usuario 
 
    ${response_keyword} =  Informar dados do USuario Válido ${ID_USUARIO}     
@@ -44,7 +42,7 @@ CT01- Iniciando Autenticação Básica
 
 CT02 - Verificar dados do Usuario Válido
          
-    Informar dados do USuario Válido 5  
+    Informar dados do USuario Válido 1  
     Validar id e tipo do usuario     
       
 
